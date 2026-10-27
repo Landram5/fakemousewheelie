@@ -176,7 +176,7 @@ public abstract class MixinAbstractContainerScreen extends Screen implements ICo
 		}
 
 		ContainerScreenHelper<?> screenHelper = this.screenHelper.get();
-		if (button == 0) { // Left mouse button
+		if (button == com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_LEFT) { // Left mouse button (26.3 uses SDL numbering: left 1, right 3)
 			if (MouseWheelie.config.general.enableDropModifier && MWClient.DROP_MODIFIER.isDown()) {
 				for (Slot slot : slots) {
 					if (!slot.getItem().isEmpty()) {
@@ -200,7 +200,7 @@ public abstract class MixinAbstractContainerScreen extends Screen implements ICo
 
 		ItemStack cursorStack = menu.getCarried();
 		if (!cursorStack.isEmpty() && cursorStack.getItem() instanceof BundleItem item) {
-			if (bundleDragMode == null && button != 0) {
+			if (bundleDragMode == null && button != com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_LEFT) {
 				return;
 			}
 			Slot lastSlot = null;
@@ -254,7 +254,7 @@ public abstract class MixinAbstractContainerScreen extends Screen implements ICo
 	//# else
 	//- public void onMouseClick(double x, double y, int button, CallbackInfoReturnable<Boolean> cir) {
 	//# end
-		if (button == 0) {
+		if (button == com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_LEFT) {
 			Slot hoveredSlot = findSlot(x, y);
 			if (hoveredSlot == null) {
 				return;
@@ -307,7 +307,7 @@ public abstract class MixinAbstractContainerScreen extends Screen implements ICo
 			if (success) {
 				cir.setReturnValue(true);
 			}
-		} else if (button == 1) {
+		} else if (button == com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_RIGHT) {
 			ItemStack cursorStack = menu.getCarried();
 			if (!cursorStack.isEmpty() && MouseWheelie.config.general.enableBundleDragging && cursorStack.getItem() instanceof BundleItem item) {
 				Slot hoveredSlot = findSlot(x, y);

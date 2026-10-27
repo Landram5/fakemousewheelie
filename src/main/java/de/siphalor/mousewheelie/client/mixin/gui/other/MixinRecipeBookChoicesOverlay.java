@@ -35,8 +35,8 @@ public class MixinRecipeBookChoicesOverlay {
 	)
 	//# if MC_VERSION_NUMBER >= 12109
 	public MouseButtonEvent modifyMouseClickedEvent(MouseButtonEvent event) {
-		if (event.button() == 1 && MouseWheelie.config.general.enableQuickCraft) {
-			return new MouseButtonEvent(event.x(), event.y(), new MouseButtonInfo(0, event.modifiers()));
+		if (event.button() == com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_RIGHT && MouseWheelie.config.general.enableQuickCraft) {
+			return new MouseButtonEvent(event.x(), event.y(), new MouseButtonInfo(com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_LEFT, event.modifiers()));
 		}
 		return event;
 	}

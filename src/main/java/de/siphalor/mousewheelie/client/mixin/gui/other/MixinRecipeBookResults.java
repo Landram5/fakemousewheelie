@@ -110,7 +110,7 @@ public abstract class MixinRecipeBookResults implements IRecipeBookResults {
 		//# if MC_VERSION_NUMBER >= 12109
 		int button = event.button();
 		//# end
-		if (MouseWheelie.config.general.enableQuickCraft && button == 1 && recipeButton.isOnlyOption()) {
+		if (MouseWheelie.config.general.enableQuickCraft && button == com.mojang.blaze3d.platform.InputConstants.MOUSE_BUTTON_RIGHT && recipeButton.isOnlyOption()) {
 			//# if MC_VERSION_NUMBER >= 12103
 			lastClickedRecipe = recipeButton.getCurrentRecipe();
 			//# else

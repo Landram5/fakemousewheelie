@@ -23,6 +23,7 @@ import de.siphalor.coat.util.EnumeratedMaterial;
 import de.siphalor.mousewheelie.MWConfig;
 import de.siphalor.mousewheelie.MWFeature;
 import de.siphalor.mousewheelie.MouseWheelie;
+import de.siphalor.mousewheelie.client.inventory.DragTweaks;
 import de.siphalor.mousewheelie.client.inventory.StackPicker;
 import de.siphalor.mousewheelie.client.inventory.ToolPicker;
 import de.siphalor.mousewheelie.client.inventory.sort.SortMode;
@@ -156,6 +157,8 @@ public class MWClient implements ClientModInitializer {
 		//# end
 
 		MWClientNetworking.setup();
+
+		DragTweaks.register();
 
 		// Stop background work before the client tears down, so closing the game can't hang or crash.
 		ClientLifecycleEvents.CLIENT_STOPPING.register(client -> InteractionManager.shutdown());

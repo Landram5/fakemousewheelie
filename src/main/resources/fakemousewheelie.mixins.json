@@ -18,6 +18,7 @@
 		"gui.other.MixinRecipeBookChoicesOverlay",
 		"gui.other.MixinRecipeBookResults",
 		"gui.other.MixinRecipeBookWidget",
+		"gui.screen.AbstractContainerScreenAccessor",
 		"gui.screen.MixinAbstractContainerScreen",
 		"gui.screen.MixinCreativeInventoryScreen",
 		"gui.screen.MixinMerchantScreen"

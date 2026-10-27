@@ -82,6 +82,11 @@ public class MWConfig {
 
 		public boolean enableBundleDragging = true;
 
+		// from Mouse Tweaks (see DragTweaks)
+		public boolean rightDragOnePerSlot = true;
+
+		public boolean leftDragCollect = true;
+
 		//# if MC_VERSION_NUMBER >= 12103
 		public boolean pickFromBundles = true;
 		//# end

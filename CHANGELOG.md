@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.4 — 2026-10-26
+
+- Added Mouse Tweaks' drag features, so Mouse Tweaks is no longer needed alongside this mod:
+  - Right-drag while holding a stack puts one item into each slot you pass over.
+  - Click a stack and keep holding left click, then drag over slots to collect matching items (Shift moves them instead).
+  - Both can be turned off in the config (General section). Shift-drag moving and scroll moving were already here.
+- Ported from Mouse Tweaks by Ivan Molodetskikh (BSD 3-Clause, see LICENSE_MouseTweaks and NOTICE).
+
 ## 1.0.3 — 2026-10-26
 
 - New icon and README logo (Siphalor's Mouse Wheelie artwork is no longer used).
