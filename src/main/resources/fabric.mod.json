@@ -1,0 +1,70 @@
+{
+	"schemaVersion": 1,
+	"id": "fakemousewheelie",
+	"version": "",
+
+	"name": "fakemousewheelie",
+	"description": "Unofficial Minecraft 26.3 fork of Mouse Wheelie by Siphalor: improved mouse wheel actions in inventory GUIs, with hardened client shutdown.",
+
+	"authors": [
+		"Landram5",
+		"Siphalor (original Mouse Wheelie author)"
+	],
+	"contributors": [
+		"Fourmisain"
+	],
+	"contact": {
+		"sources": "https://github.com/Landram5/fakemousewheelie",
+		"issues": "https://github.com/Landram5/fakemousewheelie/issues"
+	},
+
+	"license": "Apache-2.0",
+	"icon": "assets/fakemousewheelie/icon.png",
+
+	"environment": "*",
+	"mixins": [
+		"fakemousewheelie.mixins.json"
+	],
+	"entrypoints": {
+		"client": [
+			{
+				"value": "de.siphalor.mousewheelie.client.MWClient"
+			}
+		],
+		"main": [
+			{
+				"value": "de.siphalor.mousewheelie.MouseWheelie"
+			}
+		],
+		"modmenu": [
+			{
+				"value": "de.siphalor.mousewheelie.client.compat.MWModMenuEntryPoint"
+			}
+		]
+	},
+	"suggests": {
+		"fabric": "*"
+	},
+	"conflicts": {
+		"appliedenergistics2": "*",
+		"mousewheelie": "*"
+	},
+	"depends": {
+		"amecs_key_mapping_descriptions": "*",
+		"amecs_priority_key_mappings": "*",
+		"amecs_mouse_inputs": "*",
+		"coat": "*",
+		"fabricloader": ">=0.20.0",
+		"fabric-api-base": "*",
+		"fabric-events-interaction-v0": "*",
+		"fabric-item-api-v1": "*",
+		"fabric-lifecycle-events-v1": "*",
+		"fabric-networking-api-v1": "*",
+		"fabric-resource-loader-v0": "*",
+		"fabric-registry-sync-v0": "*",
+		"fabric-screen-api-v1": "*"
+	},
+	"custom": {
+		"modmenu:clientsideOnly": true
+	}
+}

@@ -1,0 +1,34 @@
+# gradle
+
+.gradle/
+build/
+out/
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# fabric
+
+run/
+
+# local scratch, not part of the fork
+fix2/
+fix3/
+*.zip
+api.txt
+dump-api.ps1
+# upstream cross-version helper submodule; not used by this 26.3 build
+helpers/
+.gitmodules

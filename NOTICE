@@ -1,0 +1,17 @@
+fakemousewheelie
+================
+This project is a modified fork of "Mouse Wheelie" (https://github.com/Siphalor/mouse-wheelie),
+Copyright Siphalor and contributors, licensed under the Apache License, Version 2.0 (see LICENSE).
+It is NOT the official Mouse Wheelie and is not endorsed by its authors.
+
+Changes made in this fork (Apache-2.0 section 4(b)):
+ - Mod id/name changed from "mousewheelie"/"Mouse Wheelie" to "fakemousewheelie"; assets namespace,
+   translation keys, mixin config file, config file name and network channel ids renamed accordingly.
+   The Java package (de.siphalor.mousewheelie) is unchanged to keep the diff small.
+ - Added a Minecraft 26.3 build configuration (gradle/mc-26.3.0); toolchain bumped (Fabric Loader 0.20.1,
+   Fabric Loom 1.17.21, Gradle 9.5.1).
+ - Shutdown hardening: background threads are daemon threads, the interaction scheduler is stopped on
+   ClientLifecycleEvents.CLIENT_STOPPING, scheduled tasks are guarded, locks are released in finally blocks.
+ - Removed upstream publishing automation, CI workflows and project IDs (Modrinth/CurseForge/GitHub/Maven).
+ - Declared a conflict with the original "mousewheelie" mod (both cannot be installed together).
+Original copyright and license notices are retained in LICENSE and in the source file headers.

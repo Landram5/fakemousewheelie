@@ -1,0 +1,28 @@
+{
+	"required": true,
+	"package": "de.siphalor.mousewheelie.client.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [],
+	"client": [
+		"CreativeModeTabsAccessor",
+		"MinecraftClientAccessor",
+		"MixinClientPlayNetworkHandler",
+		"MixinContainer",
+		"MixinCreativeSlot",
+		"MixinMinecraftClient",
+		"MixinSlot",
+		"entity.MixinClientPlayerEntity",
+		"entity.MixinLivingEntity",
+		"gui.other.MixinAbstractButtonWidget",
+		"gui.other.MixinMerchantWidgetButtonPage",
+		"gui.other.MixinRecipeBookChoicesOverlay",
+		"gui.other.MixinRecipeBookResults",
+		"gui.other.MixinRecipeBookWidget",
+		"gui.screen.MixinAbstractContainerScreen",
+		"gui.screen.MixinCreativeInventoryScreen",
+		"gui.screen.MixinMerchantScreen"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
